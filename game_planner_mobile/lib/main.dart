@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:game_planner_mobile/ui/screens/home_screen.dart';
 
 void main() {
+  // Inizializza Flutter
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Avvia l'applicazione
   runApp(const MyApp());
 }
 

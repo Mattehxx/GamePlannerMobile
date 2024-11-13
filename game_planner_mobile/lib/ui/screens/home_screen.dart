@@ -39,7 +39,7 @@ class FantasyHomePage extends StatelessWidget {
               children: [
                 const SizedBox(height: 20),
                 const Text(
-                  'Where fantasy become reality',
+                  'Where fantasy \nbecome reality',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 36,
@@ -68,7 +68,7 @@ class FantasyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => WebViewScreen(),
+                        builder: (context) => const WebViewScreen(),
                       ),
                     );
                   },
