@@ -12,21 +12,29 @@ class _WebViewScreenState extends State<WebViewScreen> {
   late WebViewController _controller;
 
   @override
+  void initState() {
+    super.initState();
+    _controller = WebViewController()
+      ..loadRequest(Uri.parse('https://pub.dev'));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Web View'),
+        title:
+            const Text('Game Planner', style: TextStyle(color: Colors.white)),
         centerTitle: true,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.deepPurple[800],
         actions: [
           IconButton(
-            icon: const Icon(Icons.refresh),
+            icon: const Icon(Icons.refresh, color: Colors.white),
             onPressed: () {
               _controller.reload();
             },
           ),
           IconButton(
-            icon: const Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () async {
               if (await _controller.canGoBack()) {
                 _controller.goBack();
@@ -34,7 +42,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.arrow_forward),
+            icon: const Icon(Icons.arrow_forward, color: Colors.white),
             onPressed: () async {
               if (await _controller.canGoForward()) {
                 _controller.goForward();
@@ -43,13 +51,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
           ),
         ],
       ),
-      body: WebView(
-        initialUrl: 'https://flutter.dev',
-        javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (WebViewController webViewController) {
-          _controller = webViewController;
-        },
-      ),
+      body: WebViewWidget(controller: _controller),
     );
   }
 }

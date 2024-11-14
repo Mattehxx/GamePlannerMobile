@@ -1,21 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:game_planner_mobile/ui/screens/web_view_screen.dart';
-
-void main() => runApp(const HomeScreen());
+import 'package:game_planner_mobile/ui/widgets/animated_fantasy_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: FantasyHomePage(),
-    );
-  }
-}
-
-class FantasyHomePage extends StatelessWidget {
-  const FantasyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,22 +26,23 @@ class FantasyHomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(height: 20),
-                const Text(
+                const AnimatedFantasyText(),
+                /* const Text(
                   'Where fantasy \nbecome reality',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 48,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     shadows: [
                       Shadow(
-                        offset: Offset(2, 2),
-                        color: Colors.black54,
+                        offset: Offset(3, 3),
+                        color: Colors.black,
                         blurRadius: 4,
                       ),
                     ],
                   ),
-                ),
+                ), */
                 const SizedBox(height: 30),
                 FilledButton(
                   style: ElevatedButton.styleFrom(
