@@ -33,7 +33,6 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   webview_flutter: ^4.10.0
-  google_fonts: ^2.3.2
 
 dev_dependencies:
   flutter_test:
@@ -77,12 +76,12 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Bold.ttf
-          weight: 700
+  #fonts:
+  # - family: Roboto
+  #  fonts:
+  #   - asset: assets/fonts/Roboto-Regular.ttf
+  #  - asset: assets/fonts/Roboto-Bold.ttf
+  #   weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

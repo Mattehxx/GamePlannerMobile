@@ -22,19 +22,16 @@ class _WebViewScreenState extends State<WebViewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:
-            const Text('Game Planner', style: TextStyle(color: Colors.white)),
-        centerTitle: true,
-        backgroundColor: Colors.deepPurple[800],
+        backgroundColor: Colors.white,
         actions: [
           IconButton(
-            icon: const Icon(Icons.refresh, color: Colors.white),
+            icon: const Icon(Icons.refresh, color: Colors.black),
             onPressed: () {
               _controller.reload();
             },
           ),
           IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () async {
               if (await _controller.canGoBack()) {
                 _controller.goBack();
@@ -42,7 +39,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.arrow_forward, color: Colors.white),
+            icon: const Icon(Icons.arrow_forward, color: Colors.black),
             onPressed: () async {
               if (await _controller.canGoForward()) {
                 _controller.goForward();

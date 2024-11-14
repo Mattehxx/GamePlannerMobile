@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AnimatedFantasyText extends StatefulWidget {
   const AnimatedFantasyText({super.key});
@@ -45,7 +44,7 @@ class _AnimatedFantasyTextState extends State<AnimatedFantasyText>
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-        style: GoogleFonts.roboto(
+        style: const TextStyle(
           fontSize: 48,
           color: Colors.white,
           fontWeight: FontWeight.bold,
@@ -74,9 +73,9 @@ class _AnimatedFantasyTextState extends State<AnimatedFantasyText>
                       Rect.fromLTWH(0, 0, bounds.width, bounds.height),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     'fantasy',
-                    style: GoogleFonts.roboto(
+                    style: TextStyle(
                       fontSize: 48,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
