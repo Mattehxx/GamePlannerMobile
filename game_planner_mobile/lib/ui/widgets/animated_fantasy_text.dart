@@ -4,6 +4,7 @@ class AnimatedFantasyText extends StatefulWidget {
   const AnimatedFantasyText({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _AnimatedFantasyTextState createState() => _AnimatedFantasyTextState();
 }
 
