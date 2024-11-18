@@ -4,7 +4,6 @@ class AnimatedFantasyText extends StatefulWidget {
   const AnimatedFantasyText({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _AnimatedFantasyTextState createState() => _AnimatedFantasyTextState();
 }
 
@@ -59,6 +58,8 @@ class _AnimatedFantasyTextState extends State<AnimatedFantasyText>
         children: [
           const TextSpan(text: 'Where '),
           WidgetSpan(
+            alignment: PlaceholderAlignment.baseline,
+            baseline: TextBaseline.alphabetic,
             child: AnimatedBuilder(
               animation: _controller,
               builder: (context, child) {
