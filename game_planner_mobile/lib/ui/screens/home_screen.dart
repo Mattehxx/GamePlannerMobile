@@ -27,22 +27,6 @@ class HomeScreen extends StatelessWidget {
               children: [
                 const SizedBox(height: 20),
                 const AnimatedFantasyText(),
-                /* const Text(
-                  'Where fantasy \nbecome reality',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 48,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    shadows: [
-                      Shadow(
-                        offset: Offset(3, 3),
-                        color: Colors.black,
-                        blurRadius: 4,
-                      ),
-                    ],
-                  ),
-                ), */
                 const SizedBox(height: 30),
                 FilledButton(
                   style: ElevatedButton.styleFrom(
