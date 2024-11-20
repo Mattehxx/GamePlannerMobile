@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:game_planner_mobile/ui/screens/home_screen.dart';
+import 'package:game_planner/ui/screens/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

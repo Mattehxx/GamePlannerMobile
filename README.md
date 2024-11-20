@@ -1,4 +1,4 @@
-# game_planner_mobile
+# game_planner
 
 A new Flutter project.
 

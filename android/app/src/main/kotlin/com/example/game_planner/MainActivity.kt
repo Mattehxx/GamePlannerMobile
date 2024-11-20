@@ -1,4 +1,4 @@
-package com.example.game_planner_mobile
+package com.example.game_planner
 
 import io.flutter.embedding.android.FlutterActivity
 

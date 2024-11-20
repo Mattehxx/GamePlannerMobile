@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:game_planner_mobile/ui/screens/web_view_screen.dart';
+import 'package:game_planner/ui/screens/web_view_screen.dart';
 import 'package:typewritertext/typewritertext.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -33,14 +33,14 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 SizedBox(
                   height: 60,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      const SizedBox(width: 20.0, height: 100.0),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 24),
-                        child: const Text(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: MediaQuery.of(context).size.width * 0.08),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
                           'Where',
                           style: TextStyle(
                             color: Colors.white,
@@ -55,31 +55,30 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                         ),
-                      ),
-                      const SizedBox(width: 20.0),
-                      DefaultTextStyle(
-                        style: const TextStyle(
-                          color: Color(0xFF9147FF),
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          shadows: [
-                            Shadow(
-                              offset: Offset(3, 3),
-                              color: Colors.black54,
-                              blurRadius: 4,
-                            ),
-                          ],
+                        DefaultTextStyle(
+                          style: const TextStyle(
+                            color: Color(0xFF9147FF),
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                            shadows: [
+                              Shadow(
+                                offset: Offset(3, 3),
+                                color: Colors.black54,
+                                blurRadius: 4,
+                              ),
+                            ],
+                          ),
+                          child: AnimatedTextKit(
+                            animatedTexts: [
+                              RotateAnimatedText('FANTASY'),
+                              RotateAnimatedText('JOURNEY'),
+                              RotateAnimatedText('MYSTERY'),
+                            ],
+                            repeatForever: true,
+                          ),
                         ),
-                        child: AnimatedTextKit(
-                          animatedTexts: [
-                            RotateAnimatedText('FANTASY'),
-                            RotateAnimatedText('JOURNEY'),
-                            RotateAnimatedText('MYSTERY'),
-                          ],
-                          repeatForever: true,
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 const Text(
