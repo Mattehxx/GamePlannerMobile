@@ -15,7 +15,9 @@ class _WebViewScreenState extends State<WebViewScreen> {
   void initState() {
     super.initState();
     _controller = WebViewController()
-      ..loadRequest(Uri.parse('https://pub.dev'));
+      ..loadRequest(Uri.parse(
+          'https://gameplannerfrontend-cbephrcxhufkdbbr.northeurope-01.azurewebsites.net'))
+      ..setJavaScriptMode(JavaScriptMode.unrestricted);
   }
 
   @override

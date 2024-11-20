@@ -14,6 +14,8 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   webview_flutter: ^4.10.0
+  typewritertext: ^3.0.9
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:
